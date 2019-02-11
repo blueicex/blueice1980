@@ -1,0 +1,6 @@
+#!/bin/bash
+let name="blueicex"
+
+if [ -n `echo  $name | sed 's/[0-9]//g'` ];then
+  echo "blueicex"
+fi

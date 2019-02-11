@@ -1,0 +1,56 @@
+#!/bin/bash
+num1=0
+num2=0
+let operator=1
+function print_usage()
+{
+   printf "please input an integer!"
+   exit 1
+}
+function unempty()
+{
+  if [ -n "`echo ${num1} | sed 's/[0-9]//g'`"] && [ -n "`echo ${num2} |sed 's/[0-9]//g'`"]
+  then 
+    print_usage;
+  fi
+  exit 0
+}
+
+
+
+
+function input1()
+{ 
+   read -p "please input first number(input q quit):" num1 
+} 
+function input2()
+{ 
+   read -p "please input second number(input q quit):" num2 
+}
+function inputoperator()
+{
+  read -p "please input operator(+-*/)" operator
+  while true
+  do
+   if [ "${operator}" = "+" ] ||  [ "${operator}" = "-" ] ||  [ "${operator}" = "*" ] ||  [ "${operator}" = "/" ]
+   then   
+     break
+   fi
+  done
+}
+
+while true
+do
+  input1
+  if [ "${num1}" = "q" ] || [ "${num2}" = "q" ];then
+    break
+  fi  
+  input2
+  if [ "${num1}" = "q" ] || [ "${num2}" = "q" ];then
+    echo $num1
+    break
+  fi
+  inputoperator
+  echo $(($num1$operator$num2)) 
+  
+done

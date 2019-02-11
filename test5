@@ -1,0 +1,4 @@
+#!/bin/bash
+#if [ -n "`echo $1|sed 's/[0-9]//g'`" ];then
+if [ -n "`echo $1 | sed 's/[0-9]//g'`"];then
+  echo "$1 is int"

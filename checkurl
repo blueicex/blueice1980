@@ -1,0 +1,37 @@
+#!/bin/bash
+check(){
+timeout=200
+tries=12
+failtimes=0
+successtimes=0
+url=$1
+if [ "`expr length $url`" = 0 ] 
+then 
+   read -p  "please repeat input url" url
+fi
+   
+
+while true
+  do
+  wget --timeout=${timeout} --tries=$tries ${url} -q -O /dev/null
+  
+  if [ $? = 0 ] 
+  then
+    $successtimes++
+  else
+    $failtimes++
+  fi
+  
+  if [ $successtimes >= 1 ]
+     then 
+     echo "success" 
+  fi
+  if [ $failtimes >=3 ] 
+     then 
+     temp="login ${url} failed $failtimes"
+     echo $temp|tee|mail -s $temp blueice1980@126.com
+     exit 1
+  fi
+  done
+}
+check

@@ -1,0 +1,10 @@
+#!/bin/bash
+name="blueicex gege";
+echo ${name};
+echo ${#name}
+echo ${name#gege}
+echo ${name##gege}
+echo ${name%%gege}
+echo ${name%gege}
+echo ${name/gege/liuzexuan}
+echo ${name//gege/liuzexuan}
