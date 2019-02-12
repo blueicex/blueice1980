@@ -1,0 +1,38 @@
+#!/bin/bash
+read -t 10 -p "please input twn number:" a b
+if [[ ${#a} = 0 ]]
+then 
+{ 
+   echo "the first num is null";
+   exit 1;
+}
+fi
+
+if [[ ${#b} = 0 ]] 
+then 
+{ 
+   echo "the second num is null";
+   exit 1;
+}
+fi
+
+#must have space
+expr $a + 1 >> /dev/null
+RETVAL1=$?
+
+expr $B + 1 >>/dev/null
+RETVAL2=$?
+
+
+
+if [ $RETVAL1 -ne 0 -o $RETVAL2 -ne 0  ]
+then
+{
+  echo "input num is not integer ! Please input again"
+  exit 1
+}
+fi
+
+#ab 之前可以不叫$
+
+echo "$a+$b=$((a+b))"
