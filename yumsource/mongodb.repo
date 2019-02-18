@@ -1,0 +1,5 @@
+[mongodbaly]
+name=mongodb4.1
+baseurl=https://mirrors.aliyun.com/mongodb/yum/redhat/7/mongodb-org/4.1/x86_64/
+gpgcheck=0
+enabled=1

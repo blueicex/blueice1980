@@ -1,0 +1,12 @@
+[niginxofficalmainline]
+name=niginxoffical
+baseurl=http://nginx.org/packages/mainline/centos/7/x86_64/
+gpgcheck=0
+enabled=1
+
+[niginxofficalstable]
+name=niginxstable
+baseurl=http://nginx.org/packages/centos/7/x86_64/
+gpgcheck=0
+enabled=1
+

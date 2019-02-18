@@ -1,0 +1,17 @@
+[mariadboffical-centos]
+name=mariadb10.3offical
+baseurl = http://yum.mariadb.org/10.3/centos7-amd64
+gpgcheck=0
+enabled=1
+
+[mariadboffical-redhat7]
+name=mariadb10.3offical
+baseurl = http://yum.mariadb.org/10.3/rhel7-amd64
+enabled=1
+gpgcheck=0
+
+[mariadb]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.4.2/centos7-amd64
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+gpgcheck=1

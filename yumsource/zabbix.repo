@@ -1,0 +1,5 @@
+[alyzabbix4.1]
+name=alyzabbix4.1
+baseurl=https://mirrors.aliyun.com/zabbix/zabbix/4.1/rhel/7/x86_64/
+gpgcheck=0
+enabled=1

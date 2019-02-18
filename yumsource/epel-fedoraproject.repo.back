@@ -1,0 +1,10 @@
+[epelfedoraproject7server]
+name=epelfedoraproject7server
+baseurl=https://dl.fedoraproject.org/pub/epel/7Server/x86_64/
+enabled=1
+gpgcheck=0
+[epelfedoraproject7]
+name=epelfedoraproject7
+baseurl=https://dl.fedoraproject.org/pub/epel/7/x86_64/
+enabled=1
+gpgcheck=0

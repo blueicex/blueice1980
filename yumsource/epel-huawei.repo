@@ -1,0 +1,10 @@
+[huawei7epel]
+name=huawei7epel
+baseurl=https://mirrors.huaweicloud.com/epel/7/x86_64/
+gpgcheck=0
+enabled=1
+[huawei7serverepel]
+name=huawei7serverepel
+baseurl=https://mirrors.huaweicloud.com/epel/7Server/x86_64/
+gpgcheck=0
+enabled=1

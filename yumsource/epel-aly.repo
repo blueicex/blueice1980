@@ -1,0 +1,10 @@
+[epelaly7]
+name=epelaly7
+baseurl=https://mirrors.aliyun.com/epel/7/x86_64/
+gpgcheck=0
+enabled=1
+[epelaly7server]
+name=epelaly7server
+baseurl=https://mirrors.aliyun.com/epel/7Server/x86_64/
+gpgcheck=0
+enabled=1
